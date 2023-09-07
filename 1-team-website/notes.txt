@@ -1,0 +1,6 @@
+Notes for each page:
+    Home: Photos, social media, updates
+    About: about page, more photos, roster
+    News: social media updates
+    Schedule: season schedule
+    photos: photo gallery
