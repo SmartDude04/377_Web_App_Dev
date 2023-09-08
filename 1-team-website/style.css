@@ -1,8 +1,12 @@
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-
+body::-webkit-scrollbar {
+    width: 0.25rem;
 }
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: black;
+}
+
