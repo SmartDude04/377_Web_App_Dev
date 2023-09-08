@@ -10,3 +10,16 @@ body::-webkit-scrollbar-thumb {
     background: black;
 }
 
+.navbar {
+    font-size: 32px;
+    font-family: 'Open Sans';
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-item {
+    font-weight: bold;
+}
