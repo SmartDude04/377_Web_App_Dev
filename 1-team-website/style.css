@@ -10,16 +10,56 @@ body::-webkit-scrollbar-thumb {
     background: black;
 }
 
+.nav-logo {
+    display:inline-block;
+    float: left;
+}
+
 .navbar {
     font-size: 32px;
-    font-family: 'Open Sans';
+    font-family: 'Poppins', sans-serif;
+
 }
 
 .nav-list {
     display: flex;
-    list-style-type: none;
+    justify-content: center;
 }
 
 .nav-item {
-    font-weight: bold;
+    --h: 1.2em;   /* the height */
+
+    line-height: var(--h);
+    color: #0000;
+    text-shadow: 
+    0 calc(-1*var(--_t,0em)) #000, 
+    0 calc(var(--h) - var(--_t,0em)) #2c3589;
+    overflow: hidden;
+    transition: .3s;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 12px;
+}
+.nav-item:hover {
+    --_t: var(--h);
+}
+
+#current-page {
+    --h: 1.2em;   /* the height */
+
+    line-height: var(--h);
+    color: #2c3589;
+    text-shadow: 
+    0 calc(-1*var(--_t,0em)) #000, 
+    0 calc(var(--h) - var(--_t,0em)) #2c3589;
+    overflow: hidden;
+    transition: .3s;
+    text-decoration: none;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 12px;
+}
+
+.spacer {
+    margin-left: 256px;
 }

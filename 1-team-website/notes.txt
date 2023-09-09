@@ -4,3 +4,8 @@ Notes for each page:
     News: social media updates
     Schedule: season schedule
     photos: photo gallery
+
+
+Band Colors:
+    Yellow: #ffc516
+    Blue: #2c3589
