@@ -11,7 +11,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav-logo {
-    display:inline-block;
+
     float: left;
 }
 
@@ -60,6 +60,10 @@ body::-webkit-scrollbar-thumb {
     margin-top: 12px;
 }
 
-.spacer {
+#nav-spacer {
     margin-left: 256px;
+}
+
+video {
+    display: block;
 }
