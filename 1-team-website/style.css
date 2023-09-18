@@ -205,3 +205,10 @@ footer a:hover {
     color:  white;
     transition: 0.3s;
 }
+
+.photos-link {
+    margin-top: 64px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
