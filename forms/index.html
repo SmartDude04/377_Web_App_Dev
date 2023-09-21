@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, initial-scale=1.0">
+    <title>Forms Intro</title>
+    <script>
+        function login(){
+            alert("Access denied. You are an unauthorized user.");
+        }
+        function register(){
+            var name = document.forms[1].elements["First Name"].value;
+            if(name == "") {
+                alert("Name is required");
+            }
+
+            var terms = document.forms[1].elements["agreement"].checked;
+            if(!terms){
+                alert("You must agree to the terms of service.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Form Examples</h1>
+
+    <h2>Login form</h2>
+    <form>
+        Username: <input name="username" type="text" placeholder="Username">
+        <br>
+        Password: <input name="password" type="password">
+        <br>
+        <input type="button" value="Login" onclick="login();">
+    </form>
+
+    <h2>User Registration Form</h2>
+
+    <form>
+        First Name: <input type="text" name="First Name"><br>
+        Last Name: <input type="text" name="Last Name"><br>
+        Username: <input type="text" name="Username"><br>
+        
+        I am a... <br>
+        <!-- The "for" for the label tag connects to the id. Allows us to select the box through the text -->
+        <input id="student" name="user-type" type="radio" value="student">
+        <label for="student">Student</label>
+        <br>
+        <input id="teacher" name="user-type" type="radio" value="teacher">
+        <label for="teacher">Teacher</label><br>
+
+        
+        Select your school:
+        <select name="" id="">
+            <option style="display:none;"></option>
+            <option value="">Cedar</option>
+            <option value="">Center</option>
+            <option value="">Middle school</option>
+            <option value="">High School</option>
+        </select>
+        <br>
+        
+        Upload your resume
+        <input type="file">
+        <br>
+
+        Please enter your email
+        <input type="email">
+        <br>
+
+        Please enter your phone number:
+        <input type="tel">
+        <br>
+
+        Please enter your date of birth
+        <input type="date">
+        <br>
+
+        <br><input id="terms" name="agreement" type="checkbox">
+        <label for="terms">I agree to the terms and conditions.</label>
+        <br>
+
+        <input type="button" value="Create Account" onclick="register();">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, initial-scale=1.0">
+    <title>Rectangle</title>
+    <script>
+
+        function calculate(){
+            var height = document.forms[0].elements["height"].value;
+            var width = document.forms[0].elements["width"].value;
+            area = width * height;
+            console.log("area: " + area);
+            document.getElementById("results").innerHTML = "<h3>Area is: " + area + " units squared.</h3>";
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Rectangle Area Calculator</h1>
+
+    <form> form
+
+        Height: <input type="number" name="height" value="1" min="1">
+        <br>
+        Width: <input type="number" name="width" value="1" min="1">
+        <br>
+
+        <input type="button" value="Calaulate Area" onclick="calculate();">
+        <br>
+
+        <div id="results">
+            Press "calculate area" to calculate...
+        </div>
+    </form>
+</body>
+</html>
