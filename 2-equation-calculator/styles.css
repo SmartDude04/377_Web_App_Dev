@@ -1,0 +1,49 @@
+body {
+    background-image: url(background.png);
+    background-size: 100%;
+}
+
+#title {
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#title h1 {
+    margin-top: 30px;
+    font-size: 128px;
+    margin-bottom: -40px;
+}
+
+#title h2 {
+    font-size: 32px;
+    margin-top: 0px;
+}
+
+.grid-container {
+    display: grid;
+    margin-left: 50px;
+    margin-right: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.element {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    height: 250px;
+    transition: 0.5s;
+}
+
+.element:hover {
+    box-shadow: 0px 0px 10px white;
+    transition: 0.5s;
+    margin: 5px;
+    height: 260px;
+}
+
+.element-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
