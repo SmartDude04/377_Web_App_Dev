@@ -46,4 +46,17 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     text-align: center;
+    margin-bottom: -10px;
+}
+
+.equation-link {
+    margin-top: 0px;
+    color: gray;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.equation-link:hover {
+    color: black;
+    transition: 0.3s;
 }
