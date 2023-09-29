@@ -20,6 +20,7 @@ if lines[-1] != "1":
 else:
     print("File appending has already been completed... Continuing with code as normal.")
 
+
 # for line in lines: "For every line in lines array: create a line variable for that position in the array"
 #     print(line.strip()) # Strip removes the extra line breaks that python adds
 for line in lines:
@@ -41,10 +42,6 @@ for line in lines:
             first_cals = second_cals
             second_cals = temp
         current_cals = 0
-            
-    
-        
-        
         
 print(str(first_cals) + ", " + str(second_cals) + ", " + str(third_cals))
 

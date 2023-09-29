@@ -18,6 +18,6 @@ for line in lines:
     
     if current_cals > top_cals:
         top_cals = current_cals
-        
-        
+
+
 print(top_cals)
