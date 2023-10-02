@@ -5,9 +5,22 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+body::-webkit-scrollbar {
+    width: 0rem;
+}
+
 body {
     background-image: url(background.png);
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    font-size: 0px;
+}
+
+img {
+    width: 100%;
+    margin: 0px;
 }
 
 #title {
@@ -38,15 +51,15 @@ body {
     background-color: white;
     border-radius: 10px;
     margin: 10px;
-    height: 250px;
     transition: 0.5s;
+    height: 384px;
 }
 
 .element:hover {
     box-shadow: 0px 0px 10px white;
     transition: 0.5s;
     margin: 5px;
-    height: 260px;
+    height: 394px;
 }
 
 .element-title {
@@ -109,9 +122,17 @@ button:hover {
 }
 
 #emc2 {
-    margin-top: 68px;
+    margin-top: 190px;
 }
 
 #fnet {
-    margin-top: 69px;
+    margin-top: 168px;
+}
+
+#ehv {
+    margin-top: 190px;
+}
+
+#at2 {
+    margin-top: 87px;
 }
