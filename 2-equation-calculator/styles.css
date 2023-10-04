@@ -12,7 +12,6 @@ body::-webkit-scrollbar {
 body {
     background-image: url(background.png);
     background-size: 100%;
-    background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0px;
     font-size: 0px;
@@ -90,7 +89,7 @@ form {
 }
 
 
-input[type=number] {
+input {
     width: 128px;
     font-size: 24px;
     border: 2px solid black;
@@ -112,13 +111,25 @@ button {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 button:hover {
     background-color: #3a68e3;
-    transition: 0.1s;
+    color: #EEEEEE;
+    transition: 0.2s;
     box-shadow: 0px 0px 3px black;
+}
+
+img {
+    margin-top: 64px;
+}
+
+#impulse-footer {
+    font-size: 12px;
+    color: gray;
+
+    text-align: center;
 }
 
 #emc2 {
@@ -136,3 +147,20 @@ button:hover {
 #at2 {
     margin-top: 87px;
 }
+
+#vvat {
+    margin-top: 150px;
+}
+
+#std-dev {
+    margin-top: 22px;
+}
+
+#total {
+    margin-top: 84px;
+}
+
+#isp {
+    margin-top: 117px;
+}
+

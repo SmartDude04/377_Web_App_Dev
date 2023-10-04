@@ -10,7 +10,6 @@
     <title>Equation Calculator</title>
     <!-- Icon by Md Tanvirul Haque: https://www.flaticon.com/authors/md-tanvirul-haque -->
     <link rel="icon" href="equation-icon.ico">
-
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="scripts.js"></script>
 
@@ -89,7 +88,7 @@
 
         <div class="element">
             <h1 class="element-title">Distance Equation</h1>
-            <a href="https://en.wikipedia.org/wiki/Acceleration" class="equation-link" target="_blank">
+            <a href="https://en.wikipedia.org/wiki/Distance" class="equation-link" target="_blank">
                 <math display='block'><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><msub><mi>v</mi><mrow><mi>x</mi><mn>0</mn></mrow></msub><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>a</mi><mi>x</mi></msub><msup><mi>t</mi><mn>2</mn></msup></mrow></math>                   
             </a>
             <form>       
@@ -120,44 +119,110 @@
 
         <div class="element">
             <h1 class="element-title">Velocity Equation</h1>
-            <a href="https://en.wikipedia.org/wiki/Acceleration" class="equation-link" target="_blank">
+            <a href="https://en.wikipedia.org/wiki/Velocity" class="equation-link" target="_blank">
                 <math display='block'><mrow><msub><mi>v</mi><mi>x</mi></msub><mo>=</mo><msub><mi>v</mi><mrow><mi>x</mi><mn>0</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mi>x</mi></msub><mi>t</mi></mrow></math>
             </a>
             <form>
+                <label for="ax =">a<sub>x</sub> = </label>
+                <input type="number" name="ax =" value="1"id="vvat-ax">
+                <label>m/s<sup>2</sup></label>
+                <br>
+
                 <label for="vx0 =">v<sub>x0</sub> = </label>
                 <input type="number" name="vx0 =" value="1"id="vvat-vx0">
                 <label>m/s</label>
                 <br>
-                <label for="v =">v = </label>
-                <input type="number" name="v =" value="1"id="ehv-v">
-                <label>Hz</label>
+
+                <label for="t =">t = </label>
+                <input type="number" name="t =" value="1"id="vvat-t">
+                <label>s</label>
                 <br>
 
-                <button onclick="eHv()" id="ehv" type="button">Get</button>
-                <input readonly="readonly" type="number" name="ehv" value="0" id="ehv-answer"> <label>J</label>
+                <button onclick="tester()" id="vvat" type="button">Get</button>
+                <input readonly="readonly" type="number" name="vvat" value="0" id="vvat-answer"> <label>m/s</label>
             </form>
         </div>
 
         <div class="element">
-            <h1 class="element-title">Velocity Equation 2</h1>
-            <a href="https://en.wikipedia.org/wiki/Acceleration" class="equation-link" target="_blank">
-                <math display='block'><mrow><msubsup><mi>v</mi><mi>x</mi><mn>2</mn></msubsup><mo>=</mo><msubsup><mi>v</mi><mrow><mn>0</mn><mi>x</mi></mrow><mn>2</mn></msubsup><mo>+</mo><mn>2</mn><msub><mi>a</mi><mi>x</mi></msub><mo stretchy='false'>(</mo><mi>x</mi><mo>&#x2212;</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy='false'>)</mo></mrow></math>                   
-            </a>
-
-        </div>
-
-        <div class="element">
             <h1 class="element-title">Standard Deviation</h1>
-            <a href="https://en.wikipedia.org/wiki/Acceleration" class="equation-link" target="_blank">
+            <a href="https://en.wikipedia.org/wiki/Standard_deviation" class="equation-link" target="_blank">
                 <math display='block'><mrow><mi>&#x03C3;</mi><mo>=</mo><msqrt><mrow><mfrac><mrow><mstyle displaystyle='true'><mo>&#x2211;</mo> <mrow><msup><mrow><mo stretchy='false'>(</mo><msub><mi>x</mi> <mi>i</mi> </msub><mo>&#x2212;</mo><mover accent='true'><mi>x</mi><mo stretchy='true'>&#x00AF;</mo></mover><mo stretchy='false'>)</mo></mrow><mn>2</mn></msup></mrow></mstyle></mrow><mrow><mi>n</mi><mo>&#x2212;</mo><mn>1</mn></mrow></mfrac></mrow></msqrt></mrow></math>
             </a>
+            <form>
+                <label for="x1 =">x<sub>1</sub> = </label>
+                <input type="number" name="ax =" value="1"id="x1">
+                <br>
+
+                <label for="x2 =">x<sub>2</sub> = </label>
+                <input type="number" name="ax =" value="1"id="x2">
+                <br>
+
+                <label for="x3 =">x<sub>3</sub> = </label>
+                <input type="number" name="ax =" value="1"id="x3">
+                <br>
+
+                <label for="x4 =">x<sub>4</sub> = </label>
+                <input type="number" name="ax =" value="1"id="x4">
+                <br>
+
+                <label for="x5 =">x<sub>5</sub> = </label>
+                <input type="number" name="ax =" value="1"id="x5">
+                <br>
+
+                <button onclick="standardDeviation()" id="std-dev" type="button">Get</button>
+                <input readonly="readonly" type="number" name="std-dev" value="0" id="std-dev-answer">
+            </form>
+        </div>
+        
+        <div class="element">
+            <h1 class="element-title">Total Impulse</h1>
+            <a href="https://en.wikipedia.org/wiki/Impulse_(physics)" class="equation-link" target="_blank">
+                <math display='block'><mrow><mi>I</mi><mo>=</mo><mstyle displaystyle='true'><mrow><munderover><mo>&#x222B;</mo><mrow><msub><mi>t</mi><mn>0</mn></msub></mrow><mrow><msub><mi>t</mi><mn>1</mn></msub></mrow></munderover><mi>F</mi></mrow></mstyle><mi>d</mi><mi>t</mi></mrow></math>                   
+            </a>
+            <form>
+                <label>t<sub>0</sub> = </label>
+                <input type="number" name="t0 =" value="1"id="total-t0">
+                <label>sec</label>
+                <br>
+
+                <label>t<sub>1</sub> = </label>
+                <input type="number" name="t0 =" value="1"id="total-t1">
+                <label>sec</label>
+                <br>
+
+                <label>F(x) = </label>
+                <input type="text" name="fx =" value="x" id="total-fx">
+                <br>
+
+                <button onclick="totalImpulse()" id="total" type="button">Get</button>
+                <input readonly="readonly" type="number" name="total" value="0" id="total-answer">
+            </form>
         </div>
 
         <div class="element">
             <h1 class="element-title">Specific Impulse</h1>
-            <a href="https://en.wikipedia.org/wiki/Acceleration" class="equation-link" target="_blank">
-                <math display='block'><mrow><mi>I</mi><mi>s</mi><mi>p</mi><mo>=</mo><mfrac><mrow><mstyle displaystyle='true'><mrow><munderover><mo>&#x222B;</mo><mn>0</mn><mi>x</mi></munderover><mi>F</mi></mrow></mstyle><mi>d</mi><mi>t</mi></mrow><mrow><mi>m</mi><msub><mi>g</mi><mn>0</mn></msub></mrow></mfrac></mrow></math>                   
+            <a href="https://www.grc.nasa.gov/www/k-12/airplane/specimp.html" class="equation-link" target="_blank">
+                <math display='block'><mrow><msub><mi>I</mi><mrow><mi>s</mi><mi>p</mi></mrow></msub><mo>=</mo><mfrac><mi>F</mi><mrow><mover accent='true'><mi>m</mi><mo>&#x02D9;</mo></mover><msub><mi>g</mi><mn>0</mn></msub></mrow></mfrac></mrow></math>                              
             </a>
+            <form>
+                <label>F = </label>
+                <input type="number" name="F =" value="1"id="isp-F">
+                <label>N</label>
+                <br>
+
+                <label>ṁ = </label>
+                <input type="number" name="t0 =" value="1"id="isp-mdot">
+                <label>kg/s</label>
+                <br>
+
+                <label>g<sub>0</sub> = </label>
+                <input readonly="readonly" type="text" name="fx =" value="9.8" id="isp-g0">
+                <label>m/s<sup>2</sup></label>
+                <br>
+
+                <button onclick="specificImpulse()" id="isp" type="button">Get</button>
+                <input readonly="readonly" type="number" name="isp" value="0" id="isp-answer">
+            </form>
         </div>
     </div>
 
