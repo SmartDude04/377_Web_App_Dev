@@ -40,9 +40,9 @@ def gameResult(line):
 def pointsFromPlay(line):
     if line[2] == "X":
         return ROCK
-    if line[2] == "Y":
+    elif line[2] == "Y":
         return PAPER
-    if line[2] == "Z":
+    elif line[2] == "Z":
         return SCISSORS
 
 total = 0
