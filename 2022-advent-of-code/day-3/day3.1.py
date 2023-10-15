@@ -13,9 +13,8 @@ for line in lines:
     line_length = len(line)
     
     # Make the two seaperate parts of the array
-    half_length = line_length / 2
-    # Above converts to float, change back to int
-    half_length = int(half_length)
+    # // only divides to an int, not a double
+    half_length = line_length // 2
     
     first_half = line[:half_length]
     second_half = line[half_length:]
@@ -34,6 +33,7 @@ def find_points(arrayIndex):
     for letter in sack_part[0]:
         if letter in sack_part[1]:
             match = letter
+            break
     
     match_ascii = ord(match)
 
