@@ -1,1 +1,1 @@
-This repository is for the HHS Web App Development class. To be edited.
+This repository is for the HHS Web App Development class.
