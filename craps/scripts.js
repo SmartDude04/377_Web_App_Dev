@@ -3,8 +3,13 @@
     // this could be just rollDie (without the ()) but usually you want more than one thing to happen. 
     // Called a callback function
 $(document).ready(function () {
-    rollDice();
+    // rollDice();
+    turnAllOff();
 })
+
+// If point is 0, we are on the first (come out) role
+// Else we are in the repeat rolls
+let point = 0;
 
 function rollDice() {
     turnAllOff();
@@ -14,6 +19,35 @@ function rollDice() {
 
     let total = roll1 + roll2;
     console.log(total);
+
+    checkRoll(total);
+    
+}
+
+function checkRoll(roll) {
+    if (point == 0) { // First roll
+        if (roll == 7 || roll == 11) {
+            $("#message").text("You win!");
+
+        } else if (roll == 2 || roll == 3 || roll == 12) {
+            $("#message").text("You lose!");
+
+        } else {
+            $("#point").text(roll);
+            $("#message").text("");
+            point = roll;
+        }
+    } else { // Re-roll
+        if (roll == 7) {
+            $("#message").text("You lose!");
+            $("#point").text("X");
+            point = 0;
+        } else if (roll == point) {
+            $("#message").text("You win!");
+            $("#point").text("X");
+            point = 0;
+        }
+    }
 }
 
 function rollDie(dieNumber) { 

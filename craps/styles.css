@@ -1,3 +1,23 @@
+#message {
+    fill: rgb(171, 0, 0);
+    font-size: 24pt;
+    text-anchor: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#point {
+    fill: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24pt;
+    text-anchor: middle;
+}
+
+#puck {
+    stroke: white;
+    stroke-width: 4px;
+}
+
 .die {
     fill: white;
     stroke: black;
