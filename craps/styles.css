@@ -26,5 +26,19 @@
 .pip {
     fill: black;
     stroke: black;
-    visibility: visible;
+    visibility: hidden;
+}
+
+#winnings {
+    font-weight: bold;
+}
+
+.spacer {
+    margin-left: 30px;
+}
+
+.controls {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 500px;
 }
