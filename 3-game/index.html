@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1080, initial-scale=1.0">
-    <title>Game Project</title>
-
-    <!-- Import Fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/aii3zuc.css">
-
-    <!-- Directories from other files / Import jQuery -->
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="scripts.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1080, initial-scale=1.0">
+        <title>Game Project</title>
+        
+        <!-- Import Fonts -->
+        <link rel="stylesheet" href="https://use.typekit.net/aii3zuc.css">
+        
+        <!-- Directories from other files / Import jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js" integrity="sha512-+VS2+Nl1Qit71a/lbncmVsWOZ0BmPDkopw5sXAS2W+OfeceCEd9OGTQWjgVgP5QaMV4ddqOIW9XLW7UVFzkMAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <script defer src="scripts.js"></script>
 </head>
 <body>
     <svg id="fullscreen-svg">
         <!-- Background -->
-        <image href="assets/background.svg" width="1543" x="-5" y="0"></image>
+        <image href="assets/background.svg" width="1920" x="-5" y="0"></image>
 
         <!-- Starting screen -->
+        <symbol id="start-button">
+            <style type="text/css">
+                .st0{fill:#00C4F4;}
+                .st1{font-family: Arial, Helvetica, sans-serif; font-weight: bold;}
+                .st2{font-size:48px;}
+            </style>
+            <g>
+                <path class="st0" d="M12,71.5C5.66,71.5,0.5,66.34,0.5,60V12C0.5,5.66,5.66,0.5,12,0.5h192c6.34,0,11.5,5.16,11.5,11.5v48
+                c0,6.34-5.16,11.5-11.5,11.5H12z"/>
+                <path d="M204,1c6.07,0,11,4.93,11,11v48c0,6.07-4.93,11-11,11H12C5.93,71,1,66.07,1,60V12C1,5.93,5.93,1,12,1H204 M204,0H12
+                C5.4,0,0,5.4,0,12v48c0,6.6,5.4,12,12,12h192c6.6,0,12-5.4,12-12V12C216,5.4,210.6,0,204,0L204,0z"/>
+            </g>
+            <text transform="matrix(1 0 0 1 20.6665 52)" class="st1 st2">START</text>
+        </symbol>
         
+        <image class="starting-screen" href="assets/game-controls-screen.png" width="94%" x="50" y="5"></image>
+        <use class="starting-screen" id="start" href="#start-button" x="42%" y="680"/>
     </svg>
 </body>
 </html>
