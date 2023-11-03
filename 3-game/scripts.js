@@ -29,7 +29,7 @@ $("#start").click(
                 time --;
                 // Update the timer
                 $("#timer").text(time);
-                console.log(time);
+                // console.log(time);
             } else {
                 $("#enemy-ship-1").remove();
                 $("#enemy-ship-2").remove();
