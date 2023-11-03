@@ -15,8 +15,6 @@ let t = setInterval(() => {
     moveShip(3);
 }, 10);
 
-// Updates highscore
-
 
 // Hover functions
 $("#start").click(
@@ -171,6 +169,8 @@ function runClick(e) {
 
 function hit(num) {
     setRandShip(num);
+    highscore++;
+    $("#highscore").text(highscore);
 }
 
 function runHit1(e) {
