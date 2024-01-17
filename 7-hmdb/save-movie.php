@@ -1,25 +1,30 @@
 <?php
 
-$serverame = "localhost";
-$username = "root";
-$password = "NsW284i^n95raK@Y%N4#";
-$dbname = "hmdb";
+include('library.php');
 
-$connection = new mysqli($serverame, $username, $password, $dbname);
-if ($connection->connect_error)
+$connection = get_database_connection();
+
+$sql = '';
+
+if (isset($id) && $id != '')
 {
-    die("Connection failed: " . $connection->connect_error);
+    $sql =<<<SQL
+    UPDATE movies
+       SET mov_title = '$title',
+           mov_year = $year,
+           mov_genre = '$genre',
+           mov_imdb_id = '$imdb_id'
+     WHERE mov_id = $id
+    SQL;
 }
-
-extract($_REQUEST); // Turns the search parameters into variables
-                    // Not needed if you want to to $_REQUEST["Variable_Name"] as the variable
-
-$sql = "INSERT INTO movies (mov_title, mov_year, mov_genre) VALUES ('$title', '$year', '$genre')";
-echo $sql;
+else
+{
+    $sql =<<<SQL
+    INSERT INTO movies (mov_title, mov_year, mov_genre, mov_imdb_id)
+    VALUES ('$title', $year, '$genre', '$imdb_id')
+    SQL;
+}
 
 $connection->query($sql);
 
-echo "Created a movie!";
-echo "<br/>";
-
-?>
+header('Location: index.php');
