@@ -27,4 +27,4 @@ for i in range(num_words):
 
 pw = pw[:-1]
 
-print(pw)
+print(f"Your new password: {pw}")
