@@ -3,18 +3,21 @@
         <tr>
             <th>Title</th>
             <th>Year</th>
+            <th>Duration</th>
+            <th>Director</th>
+            <th>Budget</th>
+            <th>Earnings</th>
             <th>Genre</th>
             <th>iMDB Link</th>
         </tr>
     </thead>
-
     <tbody>
 <?php
 
 $connection = get_database_connection();
 
 $sql =<<<SQL
-SELECT mov_id, mov_title, mov_year, mov_genre, mov_imdb_id
+SELECT *
   FROM movies
  ORDER BY mov_title, mov_year
 SQL;
@@ -27,6 +30,10 @@ while ($row = $result->fetch_assoc())
     echo '<a href="index.php?content=movie-detail&id=' . $row['mov_id'] . '">' . $row['mov_title'] . '</a>';
     echo '</td>';
     echo '<td>' . $row['mov_year'] . '</td>';
+    echo '<td>' . $row['mov_genre'] . '</td>';
+    echo '<td>' . $row['mov_director'] . '</td>';
+    echo '<td>' . $row['mov_budget'] . '</td>';
+    echo '<td>' . $row['mov_earnings'] . '</td>';
     echo '<td>' . $row['mov_genre'] . '</td>';
     echo '<td>';
     if ($row['mov_imdb_id'] != '')
