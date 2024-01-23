@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+}
+
+.grid-container {
+    padding-left: 25%;
+    padding-right: 25%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.element {
+
+}
+
+#navbar {
+    height: 50px;
+    background-color: gray;
+    align-items: center;
+}
