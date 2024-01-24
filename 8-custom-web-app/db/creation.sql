@@ -16,4 +16,4 @@ CREATE TABLE `tpm`.`security_questions` (
   `sec_title` VARCHAR(45) NOT NULL,
   `sec_answer` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`sec_id`),
-  UNIQUE INDEX `sec_id_UNIQUE` (`sec_id` ASC));
+  UNIQUE INDEX `sec_id_UNIQUE` (`sec_id` ASC) VISIBLE);

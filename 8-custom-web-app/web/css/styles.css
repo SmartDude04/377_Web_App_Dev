@@ -1,0 +1,91 @@
+/* GLOBAL CSS */
+body {
+    margin: 0px;
+    background-color: rgb(131, 157, 217);
+}
+
+.grid-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.nav-logo {
+    margin-left: 16px;
+    margin-top: 8px;
+    width: 65px;
+    height: 65px;
+    z-index: 100;
+    position: absolute;
+    transition: 0.1s;
+}
+
+.nav-logo:hover {
+    transition: 0.05s;
+    width: 67px;
+    margin-left: 15px;
+    margin-top: 7px;
+    height: 67px;
+    -webkit-filter: drop-shadow(0px 0px 2px black);
+    filter: drop-shadow(0px 0px 2x black);
+}
+
+.nav-item {
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    font-style: normal;
+    text-decoration: none;
+    text-shadow: none;
+    transition: 0.1s;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.nav-item:hover {
+    box-shadow:  0px 0px 10px gray;
+    color: black;
+    font-size: 24px;
+    transition: 0.2s;
+    height: 30px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+#new-password-box {
+    background-color: rgb(50, 84, 194);
+    color: white;
+    border: 3px solid black;
+    transition: 0.3s;
+}
+
+#new-password-box:hover {
+    background-color: white;
+    color: rgb(50, 84, 194);
+    border: 3px solid rgb(50, 84, 194);
+    transition: 0.2s;
+}
+
+#navbar {
+    z-index: 0;
+    height: 65px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: white;
+    align-items: center;
+}
+
+.content {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* PANEL CSS */
