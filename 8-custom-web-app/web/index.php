@@ -64,5 +64,12 @@
     ?>
     </div>
 
+    <!-- Bottom Bar -->
+    <div class="bottom">
+        <h1>Made by Aidan</h1>
+        <h1 id="warning">Warning: Please do not store in-use passwords in here!</h1>
+        <h1>Do not reproduce</h1>
+    </div>
+
 </body>
 </html>
