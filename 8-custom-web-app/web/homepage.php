@@ -20,13 +20,13 @@
     <h1 id="started-title">Get Started</h1>
     <div id="get-started-container">
         <h1 class="started-text">Access Your Vault: </h1>
-        <a class="started-button" href="https://google.com">My Vault</a>
+        <a class="started-button" href="index.php?loc=panel">My Vault</a>
 
         <h1 class="started-text">Explore the password generator: </h1>
-        <button class="started-button">Generator</button>
+        <a class="started-button" href="index.php?loc=generator">Generator</a>
 
         <h1 class="started-text">Create new passwords:  </h1>
-        <button class="started-button" type="button">New</button>
+        <a class="started-button" href="index.php?loc=creation">New</a>
     </div>
 </div>
 
