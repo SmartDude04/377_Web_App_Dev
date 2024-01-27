@@ -30,13 +30,13 @@
     <title>TPM • Terrible Password Manager</title>
 </head>
 <body>
-    <a href="index.php">
+    <a href="/377WAD"> <!-- Change href if this link doesn't properly link -->
         <img src="img/logo.png" alt="logo link" class="nav-logo">
     </a>
     <nav class="grid-container grid-fit" id="navbar">
-        <a class="nav-item" href="index.php?loc=panel">My Vault</a>
-        <a class="nav-item" href="index.php?loc=generator">Password Generator</a>
-        <a class="nav-item" href="index.php?loc=creation" id="new-password-box">New Password</a>
+        <a class="nav-item" href="/377WAD?loc=panel">My Vault</a> <!-- Change href if this link doesn't properly link -->
+        <a class="nav-item" href="/377WAD?loc=generator">Password Generator</a> <!-- Change href if this link doesn't properly link -->
+        <a class="nav-item" href="/377WAD?loc=creation" id="new-password-box">New Password</a> <!-- Change href if this link doesn't properly link -->
     </nav>
 
     <div class="content">
@@ -55,6 +55,7 @@
     elseif($_GET["loc"] == "generator")
     {
         include "generator.php";
+        
     }
     elseif($_GET["loc"] == "creation")
     {
@@ -65,11 +66,25 @@
     </div>
 
     <!-- Bottom Bar -->
-    <div class="bottom">
+    <div class="bottom" id="footer">
         <h1>Made by Aidan</h1>
         <h1 id="warning">Warning: Please do not store in-use passwords in here!</h1>
-        <h1>Do not reproduce</h1>
+        <h1>377: Web Appplication Development</h1>
     </div>
+
+    
+    <?php
+    
+    if (isset($_GET["loc"]) && $_GET["loc"] == "generator")
+    {
+        // Removes the footer from the password generator page
+        echo '<script>
+            document.getElementById("footer").style.visibility = "hidden"
+            </script>';
+    }
+
+    
+    ?>
 
 </body>
 </html>

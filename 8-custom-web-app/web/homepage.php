@@ -29,8 +29,3 @@
         <a class="started-button" href="index.php?loc=creation">New</a>
     </div>
 </div>
-
-<?php
-
-$conn = dbConnect();
-
