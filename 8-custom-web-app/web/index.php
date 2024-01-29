@@ -54,8 +54,8 @@
     }
     elseif($_GET["loc"] == "generator")
     {
+        require "includes/pwg.inc.php";
         include "generator.php";
-        
     }
     elseif($_GET["loc"] == "creation")
     {
