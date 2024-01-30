@@ -4,6 +4,6 @@
     <h1 id="password"><?php echo passwordGenerator(20, 3, 3) ?></h1>
 </div>
 
-<div id="password-settings">
-    <h1 class="password-generate">Generate!</h1>
-</div>
+<form id="password-settings">
+    <input type="submit" class="password-generate">
+</form>
