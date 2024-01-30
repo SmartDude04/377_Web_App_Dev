@@ -1,3 +1,9 @@
+body, html {
+    background-image: linear-gradient(-30deg, rgb(213, 219, 234), rgb(40, 88, 190));
+    background-size: cover;
+    height: 100%;
+}
+
 #generator-title {
     font-size: 64px;
     text-align: center;
@@ -28,14 +34,17 @@
     text-align: center;
 }
 
+/* Courier font */
 .password-generate {
     background-color: rgb(50, 84, 194);
-    width: 15%;
-    margin-left: 42.5%;
-    margin-left: 42.5%;
+    margin-top: 48px;
+    width: 23%;
+    margin-left: 40%;
+    margin-left: 40%;
     border-radius: 6px;
     border: 3px solid black;
     text-align: center;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +54,82 @@
 }
 
 .password-generate:hover {
+
     box-shadow:  0px 0px 10px gray;
     transition: 0.2s;
     background-color: rgb(194, 50, 50);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-container {
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: #728EE6;
+    margin-top: 32px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    margin-left: 23%;
+    margin-right: 23%;
+    transition: 0.2s;
+}
+
+.input-container:hover {
+    box-shadow:  0px 0px 10px gray;
+    transition: 0.2s;
+}
+
+.password-label {
+    font-size: 32px;
+}
+
+.password-input {
+    text-align: center;
+    font-size: 32px;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    border: 2px solid black;
+    transition: 0.1s;
+}
+
+.password-input:hover {
+    background-color: #e0e0e0;
+    transition: 0.05s;
+    box-shadow:  0px 0px 2px white;
+}
+
+#hidden-param {
+    display: none;
+}
+
+.pw-button {
+    background-color: white !important;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid black;
+    border-radius: 3px;
+    transition: 0.1s;
+}
+
+.pw-button:hover {
+    background-color: #d5d5d5 !important;
+    transition: 0.05s;
+    box-shadow:  0px 0px 2px white;
+}
+
+.button-up {
+
+}
+
+.button-down {
+
 }

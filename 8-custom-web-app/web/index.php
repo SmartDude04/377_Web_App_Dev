@@ -46,6 +46,7 @@
 
     if (!isset($_GET["loc"]))
     {
+
         include "homepage.php";
     }
     elseif($_GET["loc"] == "panel")
