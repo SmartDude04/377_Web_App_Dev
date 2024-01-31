@@ -12,7 +12,7 @@
     {
         echo "Make length bigger...";
     }
-    elseif ($length > 20)
+    elseif ($length > 22)
     {
         echo "Make length smaller...";
     }
@@ -59,7 +59,7 @@
         <div class="input-holder">
             <label class="password-label" for="length">Length:</label>
             <input class="password-input" id="length" type="number" name="length" value="<?php echo isset($_GET["length"]) ? $_GET["length"] : 20 ?>">
-
+            
             <button class="pw-button button-up" type="button" onclick="lenStepUp()">⇧</button>
             <button class="pw-button button-down" type="button" onclick="lenStepDown()">⇩</button>
         </div>
