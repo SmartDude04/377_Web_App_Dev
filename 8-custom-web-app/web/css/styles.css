@@ -124,3 +124,37 @@ body {
     font-weight: 700;
     font-style: normal;
 }
+
+#pw-letter {
+    color: black;
+}
+
+#pw-number {
+    color: rgb(62, 62, 255);
+}
+
+#pw-special {
+    color: #ff5858;
+}
+
+#pw-dark {
+    background-color: lightgray;
+}
+
+#pw-light {
+    background-color: white;
+}
+
+#pw-dark, #pw-light {
+    display: inline-block;
+    border-radius: 8px;
+    margin-right: 2px;
+    margin-left: 2px;
+    transition: 0.25s;
+}
+
+#pw-dark:hover, #pw-light:hover {
+    box-shadow:  0px 0px 12px black;
+    transform: translateY(-8px);
+    transition: 0.25s;
+}

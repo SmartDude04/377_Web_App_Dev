@@ -73,19 +73,5 @@
         <h1>377: Web Appplication Development</h1>
     </div>
 
-    
-    <?php
-    
-    if (isset($_GET["loc"]) && $_GET["loc"] == "generator")
-    {
-        // Removes the footer from the password generator page
-        echo '<script>
-            document.getElementById("footer").style.visibility = "hidden"
-            </script>';
-    }
-
-    
-    ?>
-
 </body>
 </html>

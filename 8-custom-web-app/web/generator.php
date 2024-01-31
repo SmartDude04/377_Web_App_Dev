@@ -12,10 +12,6 @@
     {
         echo "Make length bigger...";
     }
-    elseif ($length > 22)
-    {
-        echo "Make length smaller...";
-    }
     else
     {
         echo passwordGenerator($length, $nums, $special);
@@ -58,7 +54,7 @@
     <div class="input-container">
         <div class="input-holder">
             <label class="password-label" for="length">Length:</label>
-            <input class="password-input" id="length" type="number" name="length" value="<?php echo isset($_GET["length"]) ? $_GET["length"] : 20 ?>">
+            <input class="password-input" id="length" type="number" name="length" max="20" min="0" value="<?php echo isset($_GET["length"]) ? $_GET["length"] : 20 ?>">
             
             <button class="pw-button button-up" type="button" onclick="lenStepUp()">⇧</button>
             <button class="pw-button button-down" type="button" onclick="lenStepDown()">⇩</button>
@@ -66,7 +62,7 @@
     
         <div class="input-holder">
             <label class="password-label" for="nums">Numbers:</label>
-            <input class="password-input" id="nums" type="number" name="nums" value="<?php echo isset($_GET["nums"]) ? $_GET["nums"] : 3 ?>">
+            <input class="password-input" id="nums" type="number" name="nums" max="20" min="0" value="<?php echo isset($_GET["nums"]) ? $_GET["nums"] : 3 ?>">
             
             <button class="pw-button button-up" type="button" onclick="numsStepUp()">⇧</button>
             <button class="pw-button button-down" type="button" onclick="numsStepDown()">⇩</button>
@@ -74,12 +70,13 @@
     
         <div class="input-holder">
             <label class="password-label" for="special">Special:</label>
-            <input class="password-input" id="special" type="number" name="special" value="<?php echo isset($_GET["special"]) ? $_GET["special"] : 3 ?>">
+            <input class="password-input" id="special" type="number" name="special" max="20" min="0" value="<?php echo isset($_GET["special"]) ? $_GET["special"] : 3 ?>">
 
             <button class="pw-button button-up" type="button" onclick="specialStepUp()">⇧</button>
             <button class="pw-button button-down" type="button" onclick="specialStepDown()">⇩</button>
         </div>
     
+        <!-- Hidden - only to redirect to the correct page -->
         <input type="text" id="hidden-param" name="loc" value="generator">
     </div>
 </form>
