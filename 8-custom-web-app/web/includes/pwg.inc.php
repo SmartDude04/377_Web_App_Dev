@@ -6,7 +6,7 @@ function passwordGenerator($length, $numNumbers, $numSpecial)
 
     $letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     $numbers = "0123456789";
-    $special = "!@#$%^&*()-+={[]}|:;,.?";
+    $special = "!@#$%^&*()-+={[]}|:,;.?";
 
     $password = substr(str_shuffle(str_repeat($letters, $length - $numNumbers - $numSpecial)), 0, $length - $numNumbers - $numSpecial);
     $password .= substr(str_shuffle(str_repeat($numbers, $numNumbers)), 0, $numNumbers);
@@ -15,8 +15,8 @@ function passwordGenerator($length, $numNumbers, $numSpecial)
     $password = str_shuffle($password);
 
     $returnPass = "";
-
-    // Go through and add spans for coloring
+    
+    // Go through and add spans for coloring and background coloring
     for ($i = 0; $i < strlen($password); $i++)
     {
         $char = substr($password, $i, 1);

@@ -16,7 +16,6 @@
     {
         echo passwordGenerator($length, $nums, $special);
     }
-
     
     ?>
     </h1>

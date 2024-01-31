@@ -1,0 +1,69 @@
+#panel-title {
+    text-align: center;
+    font-size: 96px;
+    text-decoration: underline;
+}
+
+table {
+    border: 4px solid gray;
+    border-radius: 15px !important;
+    border-spacing: 0;
+    box-shadow:  0px 0px 10px gray;
+    text-align: center;
+}
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+    
+table tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+    
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(184, 201, 255);
+    color: #000000;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+
+#passwords {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+}
+
+#pw-heading {
+    color: white;
+    background-color: rgb(50, 84, 194);
+}
+
+td, th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.pw-visibility {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.pw-hidden {
+    display: none;
+}
