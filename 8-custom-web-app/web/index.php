@@ -67,11 +67,11 @@
     </div>
 
     <!-- Bottom Bar -->
-    <!-- <div class="bottom" id="footer">
+    <div class="bottom" id="footer">
         <h1>Made by Aidan</h1>
         <h1 id="warning">Warning: Please do not store in-use passwords in here!</h1>
         <h1>377: Web Appplication Development</h1>
-    </div> -->
+    </div>
 
 </body>
 </html>

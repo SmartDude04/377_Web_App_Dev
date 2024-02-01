@@ -1,3 +1,22 @@
+
+<?php
+
+// Check if there are currently no passwords
+$conn = dbConnect();
+
+$sql = "SELECT pwd_id, pwd_title, pwd_username, pwd_email, pwd_password FROM passwords";
+
+$result = $conn->query($sql);
+
+if (mysqli_num_rows($result) == 0)
+{
+    echo "<h1 id='no-passwords'>You currently have no passwords stored. <a id='no-passwords-link' href='/377WAD?loc=creation'>Create one here</a>.</h1>";
+    die();
+}
+
+
+?>
+
 <h1 id="panel-title">My Vault</h1>
 
 <script>
@@ -28,6 +47,7 @@
     }
 
 </script>
+
 
 <table id="passwords"> <!-- cellpadding="0" cellspacing="0" -->
     <tr id="pw-heading">

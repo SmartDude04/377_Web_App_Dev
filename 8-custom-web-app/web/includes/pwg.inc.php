@@ -1,6 +1,6 @@
 <?php
 
-function passwordGenerator($length, $numNumbers, $numSpecial)
+function passwordGenerator($length, $numNumbers, $numSpecial, $returnPlainAsWell)
 {
     $password = "";
 
@@ -46,6 +46,14 @@ function passwordGenerator($length, $numNumbers, $numSpecial)
         $returnPass .= '</span>';
     }
 
-    return $returnPass;
+    if (!isset($returnPlainAsWell) || $returnPlainAsWell == false)
+    {
+        return $returnPass;
+    }
+    else
+    {
+        return [$returnPass, $password];
+    }
+
 
 }

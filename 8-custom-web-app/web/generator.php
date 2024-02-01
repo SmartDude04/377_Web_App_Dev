@@ -8,13 +8,15 @@
     $nums = isset($_GET["nums"]) ? $_GET["nums"] : 3;
     $special = isset($_GET["special"]) ? $_GET["special"] : 3;
 
+    $password = $nums + $special <= $length ? passwordGenerator($length, $nums, $special, true) : "";
+
     if($nums + $special > $length)
     {
         echo "Make length bigger...";
     }
     else
     {
-        echo passwordGenerator($length, $nums, $special);
+        echo $password[0];
     }
     
     ?>
@@ -48,6 +50,15 @@
         function specialStepDown() {
             document.getElementById("special").stepDown(1);
         }
+
+        function copyPass(password) {
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(password);
+
+            // Alert the copied text
+            alert("Copied your password to the clipboard!");
+        }
     </script>
 
     <div class="input-container">
@@ -78,4 +89,6 @@
         <!-- Hidden - only to redirect to the correct page -->
         <input type="text" id="hidden-param" name="loc" value="generator">
     </div>
+
+    <input type="button" id="clipboard" value="Copy to Clipboard" onclick="copyPass('<?php echo $password[1] ?>')">
 </form>
