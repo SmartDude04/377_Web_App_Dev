@@ -1,8 +1,7 @@
 <h1 id="create-title">
     <?php
 
-    $pw;
-    $questions;
+
     
     if (isset($_GET["id"]))
     {
@@ -40,7 +39,7 @@
 <script>
 
     function deletePassword() {
-        document.getElementById("create-password").action = "/377WAD?loc=generator";
+        document.getElementById("action-input").value = "delete";
     }
 
     function savePassword(update) {
@@ -51,46 +50,109 @@
         }
     }
 
+    let questionNum = 1;
+
+    function newSecurityQuestion() { // Need to get existing questions here too
+
+        // Max security questions just because it would be unrealistic to have more than 5
+
+        if (questionNum <= 5) {
+            let fullDiv = "<div class='full-question' id='delete-" + questionNum + "'>";
+            let topDiv = "<div class='question' id='question-box-" + questionNum + "'>";
+            let questionLabel = "<label for='question-" + questionNum + "' class='question-label'>Question:</label>";
+            let questionInput = "<input type='text' class='question-input' name='question-" + questionNum + "' id='question-" + questionNum + "'>";
+            let answerLabel = "<label for='answer-" + questionNum + "' class='answer-label'>Answer:</label>";
+            let answerInput = "<input type='text' class='answer-input' name='answer-" + questionNum + "' id='answer-" + questionNum + "'>";
+            let bottomDiv = "</div>";
+            let deleteButton = "<button type='button' class='question-delete-button' onclick='deleteQuestion(" + questionNum + ")'>Delete</button>";
+            let end = "</div>";
+    
+            document.getElementById("security-questions").innerHTML += fullDiv + topDiv + questionLabel + questionInput + answerLabel + answerInput + bottomDiv + deleteButton + end;
+    
+            questionNum++;
+        } else {
+            alert("Cannot create more than 5 security questions!");
+        }
+    }
+
+    function setSecurityQuestion(title, answer) {
+        let fullDiv = "<div class='full-question' id='delete-" + questionNum + "'>";
+        let topDiv = "<div class='question' id='question-box-" + questionNum + "'>";
+        let questionLabel = "<label for='question-" + questionNum + "' class='question-label'>Question:</label>";
+        let questionInput = "<input type='text' class='question-input' name='question-" + questionNum + "' id='question-" + questionNum + "' value='" + title + "'>";
+        let answerLabel = "<label for='answer-" + questionNum + "' class='answer-label'>Answer:</label>";
+        let answerInput = "<input type='text' class='answer-input' name='answer-" + questionNum + "' id='answer-" + questionNum + "' value='" + answer + "'>";
+        let bottomDiv = "</div>";
+        let deleteButton = "<button type='button' class='question-delete-button' onclick='deleteQuestion(" + questionNum + ")'>Delete</button>";
+        let end = "</div>";
+
+        document.getElementById("security-questions").innerHTML += fullDiv + topDiv + questionLabel + questionInput + answerLabel + answerInput + bottomDiv + deleteButton + end;
+
+        questionNum++;
+    }
+
+    function deleteQuestion(deleteNum) {
+        document.getElementById("delete-" + deleteNum).remove();
+        // Yes, I know you wont be able to add another question without refreshing because I didn't decrement the 
+        // question num variable.. this was so two divs didn't have the same id, or fields that needed to be deleted
+        // didn't get filled over
+
+        // Probably a way to do it so it works all the time, but this was the easiest... and quickest
+    }
+
 </script>
 
-<div>
-    <form id="create-password" action="/377WAD/includes/pwc.inc.php"class="pw-container">
+<form id="create-password" action="/377WAD/includes/pwc.inc.php"class="pw-container">
 
-        <div class="left-side">
+    <div class="left-side">
 
-            <label for="title" class="password-label">Title:</label>
-            <input type="text" class="password-input" id="pw-title" name="title" value="<?php echo isset($pw[0]) ? $pw[0] : "";  ?>">
+        <label for="title" class="password-label">Title:</label>
+        <input type="text" class="password-input" id="pw-title" name="title" value="<?php echo isset($pw[0]) ? $pw[0] : "";  ?>">
 
-            <label for="username" class="password-label">Username:</label>
-            <input type="text" class="password-input" id="pw-username" name="username" value="<?php echo isset($pw[1]) ? $pw[1] : "";  ?>">
+        <label for="username" class="password-label">Username:</label>
+        <input type="text" class="password-input" id="pw-username" name="username" value="<?php echo isset($pw[1]) ? $pw[1] : "";  ?>">
 
-            <label for="email" class="password-label">Email:</label>
-            <input type="text" class="password-input" id="pw-email" name="email" value="<?php echo isset($pw[2]) ? $pw[2] : "";  ?>">
+        <label for="email" class="password-label">Email:</label>
+        <input type="text" class="password-input" id="pw-email" name="email" value="<?php echo isset($pw[2]) ? $pw[2] : "";  ?>">
 
-            <label for="url" class="password-label">Website:</label>
-            <input type="text" class="password-input" id="pw-url" name="url" value="<?php echo isset($pw[3]) ? $pw[3] : "";  ?>">
+        <label for="url" class="password-label">Website:</label>
+        <input type="text" class="password-input" id="pw-url" name="url" value="<?php echo isset($pw[3]) ? $pw[3] : "";  ?>">
+    </div>
+
+    <!-- These are hidden and make the creation statements in pwc.inc.php work correctly -->
+    <input type="hidden" value="create-update" name="action" id="action-input">
+    <input type="hidden" value="0" name="id" id="id-input">
+
+    <div class="right-side">
+
+        <label for="password" class="password-label" id="pw-password-title">Password</label><br>
+        <input type="text" class="password-input" id="pw-password" name="password" value="<?php echo isset($pw[4]) ? $pw[4] : $password;  ?>">
+        
+        <div id="buttons">
+            <input type="submit" id="pw-button-save" value="Save" onclick="savePassword(<?php echo isset($_GET['id']) ? true : false; ?>)">
+            <input type="<?php echo isset($_GET['id']) ? 'submit' : 'hidden'?>" id="pw-button-delete" value="Delete" onclick="deletePassword()">
         </div>
+    </div>
 
-        <div class="right-side">
+    <div id="security-questions">
+        
+        <button type="button" id="sec-button" onclick="newSecurityQuestion()">+</button>
+        <label id="sec-button-label">New Security Question</label>
 
-            <label for="password" class="password-label" id="pw-password-title">Password</label><br>
-            <input type="text" class="password-input" id="pw-password" name="password" value="<?php echo isset($pw[4]) ? $pw[4] : $password;  ?>">
-            
-            <input type="hidden" value="panel" name="action" id="action-input">
-            <input type="hidden" value="0" name="id" id="id-input">
-            
-            <div id="buttons">
-                <input type="submit" id="pw-button-save" value="Save" onclick="savePassword(<?php echo isset($_GET['id']) ? true : false; ?>)">
-                <input type="submit" id="pw-button-delete" value="Delete" onclick="deletePassword()">
-            </div>
-        </div>
+        <?php
+        
+        if (isset($pw[0]) && mysqli_num_rows($questions) != 0)
+        {
+            while($row = $questions->fetch_assoc())
+            {
+                $title = $row["sec_title"];
+                $answer = $row["sec_answer"];
+                echo "<script>setSecurityQuestion('$title', '$answer');</script>";
+            }
+        }
+        
+        ?>
 
-        <div id="security-questions">
-            
-            <button type="button" id="sec-button" onclick="newSecurityQuestion()">+</button>
-            <label>New Security Question</label>
+    </div>
 
-        </div>
-
-    </form>
-</div>
+</form>
