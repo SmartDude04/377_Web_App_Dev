@@ -1,5 +1,7 @@
 CREATE DATABASE `tpm` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 
+USE `tpm`;
+
 CREATE TABLE `tpm`.`passwords` (
   `pwd_id` INT NOT NULL AUTO_INCREMENT,
   `pwd_title` VARCHAR(45) NOT NULL,

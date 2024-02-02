@@ -1,11 +1,12 @@
 body {
-    background-color: white;
+    background-color: rgb(131, 157, 217);
 }
 
 .heading {
+    margin-top: 32px;
     background-color: rgb(131, 157, 217);
     padding-bottom: 64px;
-    padding-top: 64px;
+    padding-top: 32px;
 }
 
 #homepage-heading {
