@@ -75,10 +75,10 @@ if (mysqli_num_rows($result) == 0)
 
             $start = "<td><a href='/377WAD?loc=creation&id=$id'>";
             $end = "</a></td>";
-            $startLink = "<a href='/377WAD?loc=creation?id=$id'>";
+            $startLink = "<a href='/377WAD? loc=creation&id=$id'>";
 
             // Password needs to be different because inner html of innermost element is needed for password visibility
-            $startLinkPassword = "<a href='/377WAD?loc=creation?id=$id' id='pw-visibility-$increment'>";
+            $startLinkPassword = "<a href='/377WAD?loc=creation&id=$id' id='pw-visibility-$increment'>";
             
             
             echo "<tr>";
@@ -88,7 +88,7 @@ if (mysqli_num_rows($result) == 0)
             echo $row["pwd_title"];
             echo $end;
 
-            if (isset($row["pwd_username"]))
+            if (isset($row["pwd_username"]) && $row["pwd_username"] != "")
             {
                 // Username
                 echo $start;

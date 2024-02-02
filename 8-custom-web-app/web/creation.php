@@ -40,6 +40,7 @@
 
     function deletePassword() {
         document.getElementById("action-input").value = "delete";
+        document.getElementById("id-input").value = <?php echo isset($id) ? $id : "''" ?>;
     }
 
     function savePassword(update) {
@@ -48,6 +49,7 @@
         } else {
             document.getElementById("id-input").remove();
         }
+        return false;
     }
 
     let questionNum = 1;
