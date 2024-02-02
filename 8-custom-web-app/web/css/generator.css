@@ -36,6 +36,7 @@ body, html {
 }
 
 .password-generate {
+    cursor: pointer;
     background-color: rgb(50, 84, 194);
     margin-top: 48px;
     width: 23%;
@@ -158,6 +159,7 @@ input::-webkit-inner-spin-button {
 }
 
 #clipboard {
+    cursor: pointer;
     background-color: rgb(50, 84, 194);
     margin-top: 48px;
     width: 30%;

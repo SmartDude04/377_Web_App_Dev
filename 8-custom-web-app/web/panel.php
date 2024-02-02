@@ -73,7 +73,7 @@ if (mysqli_num_rows($result) == 0)
         {
             $id = $row["pwd_id"];
 
-            $start = "<td><a href='/377WAD?loc=creation?id=$id'>";
+            $start = "<td><a href='/377WAD?loc=creation&id=$id'>";
             $end = "</a></td>";
             $startLink = "<a href='/377WAD?loc=creation?id=$id'>";
 

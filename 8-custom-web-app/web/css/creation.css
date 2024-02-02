@@ -1,0 +1,142 @@
+body, html {
+    background-image: linear-gradient(-30deg, rgb(115, 147, 216), rgb(0, 52, 163));
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#create-title {
+    font-size: 86px;
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+}
+
+.pw-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: white;
+    border-radius: 32px;
+    border: 4px solid black;
+}
+
+.left-side {
+    display: grid;
+    grid-template-columns:  25% 70%;
+}
+
+.right-side {
+    margin-right: 16px;
+}
+
+.password-label, .password-input {
+    margin-top: 16px;
+}
+
+.password-label {
+    font-size: 32px;
+    text-align: right;
+    margin-right: 8px;
+}
+
+.password-input {
+    font-size: 32px;
+    border: 4px solid black;
+    border-radius: 8px;
+}
+
+#pw-url {
+    color: rgb(50, 84, 194);
+}
+
+#pw-password-title {
+    font-size: 42px;
+    display: block;
+    text-align: center;
+}
+
+#pw-password {
+    margin-top: 0px;
+    margin-left: 10%;
+    width: 80%;
+    height: 55px;
+    text-align: center;
+    font-size: 42px;
+}
+
+#buttons {
+    font-size: 24px;
+    text-align: center;
+}
+
+#pw-button-save {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(50, 84, 194);
+    border: 4px solid rgb(50, 84, 194);
+    transition: 0.3s;
+}
+
+#pw-button-save:hover {
+    background-color: rgb(50, 84, 194);
+    color: white;
+    border: 4px solid black;
+    box-shadow:  0px 0px 10px gray;
+    transition: 0.3s;
+}
+
+#pw-button-delete {
+    background-color: white;
+    color: rgb(199, 67, 67);
+    border: 4px solid rgb(199, 67, 67);
+    cursor: pointer;    
+    transition: 0.3s;
+}
+
+#pw-button-delete:hover {
+    background-color: rgb(199, 67, 67);
+    color: white;
+    border: 4px solid black;
+    box-shadow:  0px 0px 10px gray;
+    transition: 0.3s;
+}
+
+#pw-button-save, #pw-button-delete {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-top: 48px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 4px;
+    font-size: 32px;
+}
+
+#sec-button {
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+    background-color: rgb(50, 84, 194);
+    border: 4px solid black;
+    border-radius: 4px;
+    color: white;
+    width: 48px;
+    height: 48px;
+
+    margin-top: 48px;
+    margin-left: 48px;
+    transition: 0.1s;
+}
+
+#sec-button:hover {
+    width: 50px;
+    height: 50px;
+    margin-top: 47px;
+    margin-left: 47px;
+    transition: 0.1s;
+}
