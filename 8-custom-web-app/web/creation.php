@@ -108,17 +108,17 @@
 
     <div class="left-side">
 
-        <label for="title" class="password-label">Title:</label>
-        <input type="text" class="password-input" id="pw-title" name="title" value="<?php echo isset($pw[0]) ? $pw[0] : "";  ?>">
+        <label for="pw-title" class="password-label">Title:</label>
+        <input type="text" class="password-input" id="pw-title" name="title" value="<?php echo $pw[0] ?? "";  ?>">
 
-        <label for="username" class="password-label">Username:</label>
-        <input type="text" class="password-input" id="pw-username" name="username" value="<?php echo isset($pw[1]) ? $pw[1] : "";  ?>">
+        <label for="pw-username" class="password-label">Username:</label>
+        <input type="text" class="password-input" id="pw-username" name="username" value="<?php echo $pw[1] ?? "";  ?>">
 
-        <label for="email" class="password-label">Email:</label>
-        <input type="text" class="password-input" id="pw-email" name="email" value="<?php echo isset($pw[2]) ? $pw[2] : "";  ?>">
+        <label for="pw-email" class="password-label">Email:</label>
+        <input type="text" class="password-input" id="pw-email" name="email" value="<?php echo $pw[2] ?? "";  ?>">
 
-        <label for="url" class="password-label">Website:</label>
-        <input type="text" class="password-input" id="pw-url" name="url" value="<?php echo isset($pw[3]) ? $pw[3] : "";  ?>">
+        <label for="pw-url" class="password-label">Website:</label>
+        <input type="text" class="password-input" id="pw-url" name="url" value="<?php echo $pw[3] ?? "";  ?>">
     </div>
 
     <!-- These are hidden and make the creation statements in pwc.inc.php work correctly -->
@@ -128,10 +128,10 @@
     <div class="right-side">
 
         <label for="password" class="password-label" id="pw-password-title">Password</label><br>
-        <input type="text" class="password-input" id="pw-password" name="password" value="<?php echo isset($pw[4]) ? $pw[4] : $password;  ?>">
+        <input type="text" class="password-input" id="pw-password" name="password" value="<?php echo $pw[4] ?? $password;  ?>">
         
         <div id="buttons">
-            <input type="submit" id="pw-button-save" value="Save" onclick="savePassword(<?php echo isset($_GET['id']) ? true : false; ?>)">
+            <input type="submit" id="pw-button-save" value="Save" onclick="savePassword(<?php echo isset($_GET['id'])?>)">
             <input type="<?php echo isset($_GET['id']) ? 'submit' : 'hidden'?>" id="pw-button-delete" value="Delete" onclick="deletePassword()">
         </div>
     </div>

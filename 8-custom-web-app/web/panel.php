@@ -24,9 +24,9 @@ if (mysqli_num_rows($result) == 0)
     function visibility(pwNum) {
         let html = document.getElementById("pw-visibility-" + pwNum).innerHTML;
 
-        let returnPass;
+        let returnPass = "";
 
-        if (html.charAt(0) == "•") {
+        if (html.charAt(0) === "•") {
             returnPass = document.getElementById("pw-visibility-" + pwNum + "-hidden").innerHTML;
 
             // Change color of visibility icon

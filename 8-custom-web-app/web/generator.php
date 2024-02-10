@@ -4,9 +4,9 @@
     <h1 id="password">
     <?php
     
-    $length = isset($_GET["length"]) ? $_GET["length"] : 20;
-    $nums = isset($_GET["nums"]) ? $_GET["nums"] : 3;
-    $special = isset($_GET["special"]) ? $_GET["special"] : 3;
+    $length = $_GET["length"] ?? 20;
+    $nums = $_GET["nums"] ?? 3;
+    $special = $_GET["special"] ?? 3;
 
     $password = $nums + $special <= $length ? passwordGenerator($length, $nums, $special, true) : "";
 
@@ -64,7 +64,7 @@
     <div class="input-container">
         <div class="input-holder">
             <label class="password-label" for="length">Length:</label>
-            <input class="password-input" id="length" type="number" name="length" max="20" min="0" value="<?php echo isset($_GET["length"]) ? $_GET["length"] : 20 ?>">
+            <input class="password-input" id="length" type="number" name="length" max="20" min="0" value="<?php echo $_GET["length"] ?? 20 ?>">
             
             <button class="pw-button button-up" type="button" onclick="lenStepUp()">⇧</button>
             <button class="pw-button button-down" type="button" onclick="lenStepDown()">⇩</button>
@@ -72,7 +72,7 @@
     
         <div class="input-holder">
             <label class="password-label" for="nums">Numbers:</label>
-            <input class="password-input" id="nums" type="number" name="nums" max="20" min="0" value="<?php echo isset($_GET["nums"]) ? $_GET["nums"] : 3 ?>">
+            <input class="password-input" id="nums" type="number" name="nums" max="20" min="0" value="<?php echo $_GET["nums"] ?? 3 ?>">
             
             <button class="pw-button button-up" type="button" onclick="numsStepUp()">⇧</button>
             <button class="pw-button button-down" type="button" onclick="numsStepDown()">⇩</button>
@@ -80,7 +80,7 @@
     
         <div class="input-holder">
             <label class="password-label" for="special">Special:</label>
-            <input class="password-input" id="special" type="number" name="special" max="20" min="0" value="<?php echo isset($_GET["special"]) ? $_GET["special"] : 3 ?>">
+            <input class="password-input" id="special" type="number" name="special" max="20" min="0" value="<?php echo $_GET["special"] ?? 3 ?>">
 
             <button class="pw-button button-up" type="button" onclick="specialStepUp()">⇧</button>
             <button class="pw-button button-down" type="button" onclick="specialStepDown()">⇩</button>
