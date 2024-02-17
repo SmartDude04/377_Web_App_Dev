@@ -104,7 +104,7 @@
 
 </script>
 
-<form id="create-password" action="/377WAD/includes/pwc.inc.php"class="pw-container">
+<form id="create-password" action="includes/pwc.inc.php" class="pw-container">
 
     <div class="left-side">
 

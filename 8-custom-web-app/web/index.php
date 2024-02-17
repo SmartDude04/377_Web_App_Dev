@@ -34,9 +34,9 @@
         <img src="img/logo.png" alt="logo link" class="nav-logo">
     </a>
     <nav class="grid-container grid-fit" id="navbar">
-        <a class="nav-item" href="/377WAD?loc=panel">My Vault</a> <!-- Change href if this link doesn't properly link -->
-        <a class="nav-item" href="/377WAD?loc=generator">Password Generator</a> <!-- Change href if this link doesn't properly link -->
-        <a class="nav-item" href="/377WAD?loc=creation" id="new-password-box">New Password</a> <!-- Change href if this link doesn't properly link -->
+        <a class="nav-item" href="index.php?loc=panel">My Vault</a> <!-- Change href if this link doesn't properly link -->
+        <a class="nav-item" href="index.php?loc=generator">Password Generator</a> <!-- Change href if this link doesn't properly link -->
+        <a class="nav-item" href="index.php?loc=creation" id="new-password-box">New Password</a> <!-- Change href if this link doesn't properly link -->
     </nav>
 
     <div class="content">

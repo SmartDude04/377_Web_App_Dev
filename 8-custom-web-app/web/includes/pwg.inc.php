@@ -1,6 +1,6 @@
 <?php
 
-function passwordGenerator($length, $numNumbers, $numSpecial, $returnPlainAsWell)
+function passwordGenerator($length, $numNumbers, $numSpecial, $returnPlainAsWell): string | array
 {
     $password = "";
 

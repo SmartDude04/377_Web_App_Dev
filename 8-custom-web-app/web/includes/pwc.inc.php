@@ -3,10 +3,14 @@
 // Responsible for updating passwords in the database
 
 // Data validation
-if (!isset($_GET["title"]) || !isset($_GET["password"]) || !(isset($_GET["username"]) || isset($_GET["email"])) || $_GET["title"] == "" || $_GET["password"] == "" || ($_GET["username"] == "" || $_GET["email"] == ""))
+if (!isset($_GET["title"]) || !isset($_GET["password"]) || !(isset($_GET["username"]) || isset($_GET["email"])) || $_GET["title"] == "" || $_GET["password"] == "" || ($_GET["username"] == "" && $_GET["email"] == ""))
 {
     echo "<script>alert('Unable to add. You must have title, username/email, and password.');</script>";
     echo "<a href='../index.php'>Click here to go back</a>";
+//    echo "\nTitle: " . $_GET["title"];
+//    echo "\nPassword: " . $_GET["password"];
+//    echo "\nUsername: " . $_GET["username"];
+//    echo "\nEmail: " . $_GET["email"];
     die();
 }
 

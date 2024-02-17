@@ -5,10 +5,10 @@ USE `tpm`;
 CREATE TABLE `tpm`.`passwords` (
   `pwd_id` INT NOT NULL AUTO_INCREMENT,
   `pwd_title` VARCHAR(45) NOT NULL,
-  `pwd_username` VARCHAR(45) NULL,
+  `pwd_username` VARCHAR(45) NOT NULL,
   `pwd_email` VARCHAR(45) NULL,
   `pwd_password` VARCHAR(45) NOT NULL,
-  `pwd_url` VARCHAR(100) NOT NULL,
+  `pwd_url` VARCHAR(100) NULL,
   `pwd_totp` VARCHAR(45) NULL,
   `pwd_notes` VARCHAR(512) NULL,
   PRIMARY KEY (`pwd_id`),
